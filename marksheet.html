@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Results</title>
+</head>
+<body>
+  <div id="results"></div>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.student {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.student h3 {
+  margin: 0;
+  color: #333;
+}
+
+.student p {
+  margin: 5px 0;
+}
+
+.student p:first-child {
+  font-weight: bold;
+}
+
+.student p:nth-child(odd) {
+  background-color: #f9f9f9;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.student p:last-child {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.student p:last-child::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.student p:last-child::before {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.student p:last-child {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .results-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .student {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+  }
+}
+
+  </style>
+
+  <script src="marksheet.js"></script>
+</body>
+</html>
